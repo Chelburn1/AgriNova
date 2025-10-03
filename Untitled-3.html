@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriNova - African Crop Knowledge Hub</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #4ade80;
+            border-radius: 3px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #22c55e;
+        }
+        .crop-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <div id="vanta-bg" class="fixed inset-0 z-0"></div>
+    
+    <!-- Navigation -->
+    <nav class="relative z-10 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i data-feather="sun" class="text-green-600 h-8 w-8"></i>
+                        <span class="ml-2 text-xl font-bold text-green-700">AgriNova</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#" class="text-green-700 px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#" class="text-gray-500 hover:text-green-700 px-3 py-2 text-sm font-medium">Crops</a>
+                    <a href="#" class="text-gray-500 hover:text-green-700 px-3 py-2 text-sm font-medium">Resources</a>
+                    <a href="#" class="text-gray-500 hover:text-green-700 px-3 py-2 text-sm font-medium">About</a>
+                    <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full text-sm font-medium transition duration-300">
+                        Get Started
+                    </button>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-green-700 focus:outline-none">
+                        <i data-feather="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-6">West African <span class="text-green-600">Crop Wisdom</span></h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-10">
+                Comprehensive guides for 15+ essential crops cultivated in West Africa - from scientific names to profitable farming techniques.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full font-medium transition duration-300">
+                    Explore Crops
+                </button>
+                <button class="border-2 border-green-600 text-green-700 hover:bg-green-50 px-8 py-3 rounded-full font-medium transition duration-300">
+                    Learn Farming Basics
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Crops -->
+    <div class="relative z-10 bg-white/80 backdrop-blur-sm py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Featured <span class="text-green-600">Crops</span></h2>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                    Essential crops that form the backbone of West African agriculture and food security
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Crop Card 1 - Rice -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden crop-card transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/agriculture/640x360/1" alt="Rice Field" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full uppercase font-semibold tracking-wide">Staple</span>
+                            <span class="text-gray-500 text-sm">Oryza sativa</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Rice</h3>
+                        <p class="text-gray-600 mb-4">West Africa's most important cereal crop with multiple local varieties adapted to different ecosystems.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-700 font-medium">Yield: 2-5 tons/ha</span>
+                            <button class="text-green-600 hover:text-green-800 font-medium">Learn More →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Crop Card 2 - Cassava -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden crop-card transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/agriculture/640x360/2" alt="Cassava Field" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full uppercase font-semibold tracking-wide">Root Crop</span>
+                            <span class="text-gray-500 text-sm">Manihot esculenta</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Cassava</h3>
+                        <p class="text-gray-600 mb-4">Drought-resistant staple crop that's a major source of carbohydrates across West Africa.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-700 font-medium">Yield: 10-40 tons/ha</span>
+                            <button class="text-green-600 hover:text-green-800 font-medium">Learn More →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Crop Card 3 - Cocoa -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden crop-card transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/agriculture/640x360/3" alt="Cocoa Pods" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full uppercase font-semibold tracking-wide">Cash Crop</span>
+                            <span class="text-gray-500 text-sm">Theobroma cacao</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Cocoa</h3>
+                        <p class="text-gray-600 mb-4">West Africa produces 70% of the world's cocoa, primarily in Côte d'Ivoire and Ghana.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-700 font-medium">Yield: 400-600 kg/ha</span>
+                            <button class="text-green-600 hover:text-green-800 font-medium">Learn More →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="border-2 border-green-600 text-green-700 hover:bg-green-50 px-8 py-3 rounded-full font-medium transition duration-300">
+                    View All 15+ Crops
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why AgriNova Section -->
+    <div class="relative z-10 py-16 bg-gradient-to-r from-green-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Why <span class="text-green-600">AgriNova?</span></h2>
+                <p class="max-w-2xl mx-auto text-gray-600">
+                    Our comprehensive guides provide everything you need to know about cultivating West African crops profitably
+                </p>
+            </div>
+
+            <div class="mt-16">
+                <div class="grid grid-cols-1 gap-10 md:grid-cols-3">
+                    <div class="bg-white p-8 rounded-xl shadow-sm">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-100 text-green-700 mb-4">
+                            <i data-feather="book-open"></i>
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2">Complete Crop Profiles</h3>
+                        <p class="text-gray-600">
+                            Scientific names, origins, ecological requirements, and economic importance for each crop.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-sm">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-100 text-green-700 mb-4">
+                            <i data-feather="dollar-sign"></i>
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2">Financial Insights</h3>
+                        <p class="text-gray-600">
+                            Detailed information on startup costs, expected yields, and potential revenue for each crop.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-sm">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-100 text-green-700 mb-4">
+                            <i data-feather="clipboard"></i>
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2">Step-by-Step Guides</h3>
+                        <p class="text-gray-600">
+                            From land preparation to post-harvest handling, we cover every stage of crop production.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="relative z-10 bg-green-700 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6">Ready to transform your farming practice?</h2>
+            <p class="text-lg text-green-100 max-w-3xl mx-auto mb-8">
+                Access detailed cultivation guides for 15+ West African crops with financial projections to help you make informed decisions.
+            </p>
+            <button class="bg-white hover:bg-gray-100 text-green-700 px-8 py-3 rounded-full font-medium transition duration-300">
+                Get Started for Free
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="relative z-10 bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">AgriNova</h3>
+                    <p class="text-gray-400">
+                        Empowering West African farmers with comprehensive crop knowledge and profitable farming techniques.
+                    </p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Crops</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Rice</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Cassava</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Cocoa</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Yam</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Maize</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Farming Guides</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Market Prices</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Soil Testing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Funding Options</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i data-feather="mail" class="mr-2 h-4 w-4"></i>
+                            info@agrinova.africa
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="phone" class="mr-2 h-4 w-4"></i>
+                            +225 XX XXX XXXX
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="map-pin" class="mr-2 h-4 w-4"></i>
+                            Abidjan, Côte d'Ivoire
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+                <p>© 2023 AgriNova. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Vanta.js background
+        VANTA.WAVES({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x22c55e,
+            shininess: 100.00,
+            waveHeight: 15.00,
+            waveSpeed: 0.70,
+            zoom: 1.00
+        });
+
+        // Initialize feather icons
+        feather.replace();
+    </script>
+</body>
+</html>
